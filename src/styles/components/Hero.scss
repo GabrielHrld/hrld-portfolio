@@ -1,0 +1,68 @@
+@import '../app.scss';
+
+.hero-container {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: $padding;
+  background: linear-gradient(
+    0deg,
+    rgba(45, 221, 104, 0.123) 0%,
+    rgba(45, 221, 104, 0) 25%
+  );
+  .hero-principal {
+    display: flex;
+    align-items: center;
+    &_text {
+      transform: translateY(-45px);
+      h1 {
+        font-family: 'Prata', sans-serif;
+        font-weight: 200;
+        text-transform: uppercase;
+        color: $color-principal;
+        letter-spacing: 4px;
+        font-size: 5vw;
+        span {
+          color: $color-secondary;
+        }
+      }
+      p {
+        color: $color-terciary;
+        font-size: 1.8vw;
+      }
+    }
+  }
+  .hero-secondary {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    &_text {
+      transform: translateY(-45px);
+      h1,
+      h2,
+      h3 {
+        font-family: 'Prata', sans-serif;
+        letter-spacing: 4px;
+        font-weight: 200;
+        text-transform: uppercase;
+        color: $color-principal;
+        text-align: end;
+      }
+      h1 {
+        color: $color-principal;
+        font-size: 4vw;
+        transform: translateY(-80px);
+      }
+      h2 {
+        color: $color-secondary;
+        font-size: 3vw;
+        transform: translateY(-45px);
+      }
+      h3 {
+        color: $color-principal;
+        font-size: 2vw;
+      }
+    }
+  }
+}
