@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
-  "version": "1.0.0",
-  "description": "pre-config React",
+  "version": "2.0.0",
+  "description": "Personal portfolio @HeraldHRLD",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -27,7 +27,8 @@
     "eslint-plugin-react": "^7.22.0",
     "prettier": "^2.2.1",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "react-parallax": "^3.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",

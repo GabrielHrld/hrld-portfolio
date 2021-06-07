@@ -1,0 +1,99 @@
+@import '../../app.scss';
+
+.header-wrapper {
+  height: 60px;
+  width: 100%;
+  background-color: transparent;
+  border-bottom: 1px solid #424242;
+  position: fixed;
+  z-index: 2;
+  backdrop-filter: blur(3px);
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: $padding;
+    .logo-container {
+      margin-left: 20px;
+      h3 {
+        color: #fefefe;
+        font-family: 'Prata', sans-serif;
+        font-weight: 100;
+        letter-spacing: 2px;
+        text-decoration: line-through;
+        text-transform: uppercase;
+      }
+    }
+    .nav-wrapper {
+      .nav {
+        &-links {
+          display: flex;
+          &_item {
+            padding: 0.5em 0;
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3) {
+              a {
+                border-right: 1px solid #fefefe;
+              }
+            }
+            a {
+              font-family: 'Lato', sans-serif;
+              font-size: 12px;
+              text-transform: uppercase;
+              text-decoration: none;
+              color: #fefefe;
+              letter-spacing: 1px;
+              display: inline;
+              padding: 0 1em;
+            }
+          }
+        }
+      }
+    }
+    .burger-container {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-right: 20px;
+      display: none;
+      flex-flow: column nowrap;
+      justify-content: space-around;
+      cursor: pointer;
+      .burger-line {
+        width: 100%;
+        height: 0.2rem;
+        border-radius: 20px;
+        background-color: #fefefe;
+        transform-origin: 1px;
+        transition: 0.3s all ease-out;
+        &:nth-child(1).active {
+          transform: rotate(45deg);
+        }
+        &:nth-child(2) {
+          transform-origin: 50%;
+        }
+        &:nth-child(2).active {
+          transform: rotate(45deg);
+          opacity: 0;
+        }
+        &:nth-child(3).active {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .header-wrapper {
+    .header-container {
+      .nav-wrapper {
+        display: none;
+      }
+      .burger-container {
+        display: flex;
+      }
+    }
+  }
+}
