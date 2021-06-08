@@ -4,10 +4,11 @@
   height: 60px;
   width: 100%;
   background-color: transparent;
-  border-bottom: 1px solid #424242;
+  border-bottom: 1px solid $text-dark;
   position: fixed;
   z-index: 2;
   backdrop-filter: blur(3px);
+  transition: 0.4s all ease-in;
   .header-container {
     display: flex;
     align-items: center;
@@ -51,6 +52,12 @@
               letter-spacing: 1px;
               display: inline;
               padding: 0 1em;
+              transition: 0.5s all ease;
+            }
+          }
+          &_item:hover {
+            a {
+              color: $color-secondary;
             }
           }
         }
@@ -86,6 +93,10 @@
         }
       }
     }
+  }
+  &.sticky {
+    background-color: $text-dark;
+    height: 55px;
   }
 }
 

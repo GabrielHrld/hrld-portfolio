@@ -1,15 +1,24 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import '../../styles/components/Navbar/Header.scss';
 import SideMenu from './SideMenu';
 
 const header = () => {
   const [openBurger, setOperBurger] = useState(false);
-
+  const [sticky, setSticky] = useState(false);
+  const [y, setY] = useState(0);
   const handleOpenBurger = () => setOperBurger(!openBurger);
 
+  useEffect(() => {
+    if (y >= 650) setSticky(true);
+    if (y < 650) setSticky(false);
+  }, [y]);
+
+  window.addEventListener('scroll', () => {
+    setY(window.scrollY);
+  });
   return (
-    <div className="header-wrapper">
+    <div className={sticky ? 'header-wrapper sticky' : 'header-wrapper'}>
       <div className="header-container">
         <div className="logo-container">
           <h3>
@@ -23,10 +32,10 @@ const header = () => {
                 <a href="">home</a>
               </li>
               <li className="nav-links_item">
-                <a href="">work</a>
+                <a href="">about</a>
               </li>
               <li className="nav-links_item">
-                <a href="">about</a>
+                <a href="">work</a>
               </li>
               <li className="nav-links_item">
                 <a href="">contact</a>

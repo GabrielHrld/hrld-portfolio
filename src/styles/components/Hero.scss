@@ -6,11 +6,6 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: $padding;
-  background: linear-gradient(
-    0deg,
-    rgba(45, 221, 104, 0.123) 0%,
-    rgba(45, 221, 104, 0) 25%
-  );
   .hero-principal {
     display: flex;
     align-items: center;
