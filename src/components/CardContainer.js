@@ -43,9 +43,10 @@ const CardContainer = () => {
   });
 
   return (
-    <div class="container">
-      {test.map((item) => (
+    <div className="container">
+      {test.map((item, index) => (
         <Card
+          key={item + index}
           link={item.link}
           title={item.title}
           snippet={item.snippet}
