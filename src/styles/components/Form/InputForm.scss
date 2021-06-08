@@ -1,0 +1,30 @@
+@import '../../app.scss';
+
+.inputForm-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5em;
+  .inputForm-label {
+    padding: 1em 0;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    transition: 0.2s all ease;
+    &.invalidForm {
+      color: red;
+    }
+  }
+  .input {
+    height: 2.5rem;
+    padding-left: 10px;
+    background: $color-principal;
+    border: 2px solid $text-dark;
+    outline: none;
+    transition: 0.2s all ease;
+    -webkit-box-shadow: 2px 5px 10px 1px rgba(0, 0, 0, 0.24);
+    -moz-box-shadow: 2px 5px 10px 1px rgba(0, 0, 0, 0.24);
+    box-shadow: 2px 5px 10px 1px rgba(0, 0, 0, 0.24);
+    &.invalid {
+      border: 2px solid red;
+    }
+  }
+}

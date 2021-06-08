@@ -1,5 +1,6 @@
 import React from 'react';
 import AboutComponent from '../components/AboutComponent';
+import ContactContainer from '../components/ContactContainer';
 import Hero from '../components/Hero';
 import PortfolioContainer from '../components/PortfolioContainer';
 
@@ -9,6 +10,7 @@ const Home = () => {
       <Hero />
       <AboutComponent />
       <PortfolioContainer />
+      <ContactContainer />
     </div>
   );
 };
