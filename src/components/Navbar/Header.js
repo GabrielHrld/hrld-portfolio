@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import { Link, animateScroll as scroll } from 'react-scroll';
 
 import '../../styles/components/Navbar/Header.scss';
 import SideMenu from './SideMenu';
@@ -25,25 +26,43 @@ const header = () => {
       <div className="header-container">
         <div className="logo-container">
           <h3>
-            <a href="/">Gabriel dev.</a>
+            <a href="/" className="logo">
+              Gabriel dev.
+            </a>
           </h3>
         </div>
         <div className="nav-wrapper">
           <nav className="nav">
-            <ul className="nav-links">
-              <li className="nav-links_item">
-                <a href="#hero">home</a>
-              </li>
-              <li className="nav-links_item">
-                <a href="#about">about</a>
-              </li>
-              <li className="nav-links_item">
-                <a href="#portfolio">work</a>
-              </li>
-              <li className="nav-links_item">
-                <a href="#contact">contact</a>
-              </li>
-            </ul>
+            {path == '/about' ? (
+              <ul className="nav-links">
+                <li className="nav-links_item">
+                  <a href="/">home</a>
+                </li>
+              </ul>
+            ) : (
+              <ul className="nav-links">
+                <li className="nav-links_item">
+                  <Link smooth={true} duration={500} to="hero">
+                    home
+                  </Link>
+                </li>
+                <li className="nav-links_item">
+                  <Link smooth={true} duration={500} to="about">
+                    about
+                  </Link>
+                </li>
+                <li className="nav-links_item">
+                  <Link smooth={true} duration={500} to="portfolio">
+                    work
+                  </Link>
+                </li>
+                <li className="nav-links_item">
+                  <Link smooth={true} duration={500} to="contact">
+                    contact
+                  </Link>
+                </li>
+              </ul>
+            )}
           </nav>
         </div>
         <div className="burger-container" onClick={handleOpenBurger}>
