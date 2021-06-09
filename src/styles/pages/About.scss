@@ -1,0 +1,79 @@
+@import '../app.scss';
+
+.aboutPage-wrapper {
+  width: 100%;
+  .aboutPage-container {
+    position: relative;
+    top: 54px;
+    padding: $padding;
+    .coverPage-container {
+      width: 100%;
+      height: 400px;
+      margin: 0 auto;
+      overflow: hidden;
+      img {
+        filter: grayscale(100%);
+        object-fit: cover;
+      }
+    }
+    .titles {
+      margin: 2rem 0;
+      padding-left: 3rem;
+      .subtitleAbout {
+        padding: 5rem 0 2rem;
+        .aboutMe {
+          span {
+            font-family: 'Lato', sans-serif;
+            color: $color-secondary;
+            text-transform: uppercase;
+          }
+        }
+      }
+      .nameContainer {
+        h1 {
+          font-family: 'Prata', sans-serif;
+          font-weight: 100;
+          text-transform: uppercase;
+          color: $color-principal;
+          font-size: 5vw;
+        }
+      }
+      .subtitleCity {
+        padding: 2rem 0 5rem;
+        .city {
+          span {
+            font-family: 'Lato', sans-serif;
+            color: $color-secondary;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+    .paragraphContainer {
+      width: 60%;
+      padding-left: 3rem;
+      margin-bottom: 4rem;
+      .paragraph {
+        padding: 0 1em;
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+        transform: translateX(8px);
+        transition: 0.8s all ease-in;
+        &.visibleParagraph {
+          opacity: 1;
+          transform: translateX(0px);
+        }
+        p {
+          font-family: 'Prata', sans-serif;
+          font-weight: 100;
+          color: $color-principal;
+          font-size: 2vw;
+          text-align: justify;
+          line-height: 1.5em;
+          margin-bottom: 2em;
+        }
+      }
+    }
+  }
+}

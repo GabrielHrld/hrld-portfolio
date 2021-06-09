@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 import '../../styles/components/Navbar/Header.scss';
 import SideMenu from './SideMenu';
 
 const header = () => {
+  const path = useLocation().pathname;
   const [openBurger, setOperBurger] = useState(false);
   const [sticky, setSticky] = useState(false);
   const [y, setY] = useState(0);
@@ -12,7 +14,8 @@ const header = () => {
   useEffect(() => {
     if (y >= 650) setSticky(true);
     if (y < 650) setSticky(false);
-  }, [y]);
+    if (path != '/') setSticky(true);
+  }, [y, path]);
 
   window.addEventListener('scroll', () => {
     setY(window.scrollY);
