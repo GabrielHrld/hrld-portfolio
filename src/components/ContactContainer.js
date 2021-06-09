@@ -6,7 +6,7 @@ import '../styles/components/ContactContainer.scss';
 
 const ContactContainer = () => {
   return (
-    <div className="contact-wrapper">
+    <div className="contact-wrapper" id="contact">
       <div className="title">
         <p>Contacto</p>
       </div>

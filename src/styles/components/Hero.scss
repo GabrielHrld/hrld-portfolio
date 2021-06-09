@@ -62,3 +62,42 @@
     }
   }
 }
+
+@media screen and (max-width: 678px) {
+  .hero-container {
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: repeat(2, 1fr);
+    .hero-principal {
+      justify-content: flex-start;
+      &_text {
+        transform: translateY(55px);
+        h1 {
+          font-size: 10vw;
+        }
+        p {
+          font-size: 5vw;
+        }
+      }
+    }
+  }
+  .hero-secondary {
+    &_text {
+      transform: none;
+      h1 {
+        color: $color-principal;
+        font-size: 5vw;
+        transform: none;
+      }
+      h2 {
+        color: $color-secondary;
+        font-size: 4vw;
+        transform: none;
+      }
+      h3 {
+        color: $color-principal;
+        font-size: 3vw;
+      }
+    }
+  }
+}

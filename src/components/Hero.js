@@ -7,7 +7,7 @@ import '../styles/components/Hero.scss';
 const Hero = () => {
   return (
     <Parallax bgImage={Bg} bgClassName="hero" strength={400}>
-      <div className="hero-container">
+      <div className="hero-container" id="hero">
         <div className="hero-principal">
           <div className="hero-principal_text">
             <h1>

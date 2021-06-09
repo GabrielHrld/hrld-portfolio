@@ -71,7 +71,7 @@
       max-width: 100%;
       overflow-x: hidden;
       .photo-container {
-        height: 35vw;
+        height: 65%;
         position: absolute;
         left: -100%;
         opacity: -10;
@@ -85,6 +85,63 @@
           opacity: 1;
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .about-wrapper {
+    .about-container {
+      grid-template-columns: 40% 60%;
+
+      .photo {
+        max-width: 100%;
+        overflow-x: hidden;
+        .photo-container {
+          height: 53%;
+          position: absolute;
+          left: -100%;
+          opacity: -10;
+          transition: 8s opacity ease-out;
+
+          img {
+            height: 135%;
+          }
+          &.photoSticky {
+            left: 0;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width:678px) {
+  .about-wrapper {
+    .about-container {
+      display: flex;
+      grid-template-columns: none;
+      padding-bottom: 12%;
+      .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        &-container {
+          .about,
+          .learn {
+            justify-content: center;
+          }
+        }
+        h3 {
+          font-size: 4vw;
+          text-align: justify;
+          padding-left: 2rem;
+        }
+      }
+    }
+    .photo {
+      display: none;
     }
   }
 }

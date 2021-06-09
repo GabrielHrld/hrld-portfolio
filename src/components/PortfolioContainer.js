@@ -5,7 +5,7 @@ import '../styles/components/PortfolioContainer.scss';
 
 const PortfolioContainer = () => {
   return (
-    <div className="portfolio-wrapper">
+    <div className="portfolio-wrapper" id="portfolio">
       <div className="title">
         <p>Portfolio</p>
       </div>

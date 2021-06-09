@@ -31,3 +31,18 @@
     }
   }
 }
+
+@media screen and (max-width: 991px) {
+  .footer-wrapper {
+    .footer-container {
+      .info {
+        .social-icons {
+          width: 20%;
+          .icon {
+            font-size: 2.5vw;
+          }
+        }
+      }
+    }
+  }
+}
