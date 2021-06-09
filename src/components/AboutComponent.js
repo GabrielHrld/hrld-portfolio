@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { BsArrowRight } from 'react-icons/bs';
 
 import SideProfile from '../../assets/photo-about.png';
 import '../styles/components/AboutComponent.scss';
@@ -10,7 +11,7 @@ const AboutComponent = () => {
   window.addEventListener('scroll', () => {
     const scrollDistance = window.scrollY;
     if (scrollDistance >= 520) setSticky(true);
-    if (scrollDistance >= 530) setTimeout(() => setStickySpeech(true), 1000);
+    if (scrollDistance >= 520) setTimeout(() => setStickySpeech(true), 1000);
   });
 
   return (
@@ -43,8 +44,9 @@ const AboutComponent = () => {
               <span>el futuro es hoy.</span>
             </h3>
             <p className={sticky ? 'learn stickyParaph' : 'learn'}>
-              {/* añadir ícono de flecha hacia abajo */}
-              Learn more{' '}
+              <a href="/about">
+                Learn more <BsArrowRight className="icon" />
+              </a>
             </p>
           </div>
         </div>

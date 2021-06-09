@@ -1,0 +1,33 @@
+@import '../app.scss';
+
+.footer-wrapper {
+  width: 100%;
+  background-color: $text-dark;
+  .footer-container {
+    display: flex;
+    width: 100%;
+    padding: $padding;
+    .info {
+      padding: 2.5rem 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .copyright {
+        p {
+          font-family: 'Lato', sans-serif;
+          color: $color-principal;
+        }
+      }
+      .social-icons {
+        width: 10%;
+        display: flex;
+        justify-content: space-between;
+        .icon {
+          font-size: 1.8vw;
+          color: $color-principal;
+        }
+      }
+    }
+  }
+}

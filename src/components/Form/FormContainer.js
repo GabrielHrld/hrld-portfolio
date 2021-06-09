@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
-import { SiGmail } from 'react-icons/si';
 
 import '../../styles/components/Form/FormContainer.scss';
 import InputForm from './InputForm';
@@ -80,11 +79,7 @@ const FormContainer = () => {
           </a>
           <p>@gabrielrodhrld/</p>
         </div>
-        <div className="social-media">
-          <SiGmail className="icon" />
 
-          <p>g.federico.rodriguez@gmail.com</p>
-        </div>
         <div className="social-media">
           <a href="https://github.com/HeraldHRLD" target="_blank">
             <FaGithub className="icon" />
@@ -95,7 +90,7 @@ const FormContainer = () => {
           <a href="https://twitter.com/gabriel_hrld" target="_blank">
             <FaTwitter className="icon" />
           </a>
-          <p>@gabriel._federico</p>
+          <p>@gabriel_hrld</p>
         </div>
       </div>
     </div>

@@ -15,7 +15,7 @@
       height: 80vh;
       position: relative;
       &-container {
-        position: absolute;
+        position: sticky;
         right: -100%;
         transition: 1s right ease-out;
         p,
@@ -25,12 +25,24 @@
         }
         .about,
         .learn {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
           text-transform: uppercase;
           font-family: 'Lato', sans-serif;
           color: $color-secondary;
           padding: 4rem 2em;
           opacity: 0;
-          transition: 1.5s opacity ease-in;
+          transition: 2s opacity ease-in;
+          a {
+            color: $color-secondary;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            .icon {
+              margin-left: 0.4em;
+            }
+          }
           &.stickyParaph {
             opacity: 1;
           }
@@ -41,7 +53,7 @@
           font-weight: 200;
           color: $color-principal;
           opacity: 0;
-          transition: 3s opacity ease-in;
+          transition: 2s opacity ease-in;
           span {
             color: $color-secondary;
           }

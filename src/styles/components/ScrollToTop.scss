@@ -1,0 +1,27 @@
+@import '../app.scss';
+
+.scrollToTop {
+  position: fixed;
+  display: block;
+  bottom: 20px;
+  right: 20px;
+  z-index: 4;
+  cursor: pointer;
+  animation: scrollTop 0.5s alternate ease-in infinite;
+  .icon {
+    color: $text-dark;
+    font-weight: 100;
+    font-size: 4rem;
+    &.light {
+      color: $color-principal !important;
+    }
+  }
+}
+@keyframes scrollTop {
+  from {
+    transform: translateY(2px);
+  }
+  to {
+    transform: translateY(-1px);
+  }
+}
