@@ -72,6 +72,9 @@
           text-align: justify;
           line-height: 1.5em;
           margin-bottom: 2em;
+          span {
+            color: $color-secondary;
+          }
         }
       }
     }

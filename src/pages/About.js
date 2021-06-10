@@ -55,25 +55,32 @@ const About = () => {
               id="paragraph"
             >
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex
-                optio quidem magni beatae excepturi quos, laboriosam
-                exercitationem at tenetur unde? Dolorum rerum totam debitis
-                ullam temporibus eligendi earum doloribus, veritatis commodi
-                vero hic aspernatur dolore accusamus provident illum quasi
-                ipsum?
+                Soy un <span>Web developer Fullstack.</span> Soy originario del
+                sur de Buenos Aires con poco más de
+                <span> 3 años desarrollando código.</span> Me considero un
+                apasionado por el aprendizaje y el conocimiento constante. Creo
+                que todo se puede solucionar con software, aún más teniendo las
+                ideas y el objetivo claro.
               </p>
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Nostrum, molestias.
+                <span>"Todo parece imposible, hasta que se hace"</span> <br />-
+                Nelson Mandela.
               </p>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit,
-                delectus. Pariatur, asperiores! Cupiditate, illo! Quidem fuga
-                quia consequatur, accusamus vero modi dolores mollitia harum,
-                quibusdam repellat natus fugit iste odit libero esse dolor
-                beatae possimus nulla vel impedit porro iure sint? Dolore quis,
-                ratione nobis natus ipsum minus cumque eum est fuga a,
-                praesentium ut facilis ex ea et voluptate?
+                Nací un 25 de agosto, actualmente vivo cercano a la Ciudad
+                Autónoma de Buenos Aires.{' '}
+                <span>
+                  Soy una persona pragmática, organizada y con alta
+                  adaptabilidad frente a situaciones demandantes.{' '}
+                </span>
+                Me inspiran las historias surgidas de <span>"ideas locas"</span>{' '}
+                que desembocan en un producto de uso masivo a{' '}
+                <span>nivel global.</span> Amante de los desafíos y las cosas
+                difíciles de hacer. Por otro lado, los deportes y la cocina son
+                mi principal hobbie.
+              </p>
+              <p>
+                <span>"El futuro es tecnología, el futuro es hoy"</span>
               </p>
             </div>
           </div>

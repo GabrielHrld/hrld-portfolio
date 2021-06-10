@@ -39,10 +39,15 @@
             text-decoration: none;
             display: flex;
             align-items: center;
+            transition: 0.4s color ease;
             .icon {
               margin-left: 0.4em;
             }
+            &:hover {
+              color: $color-terciary;
+            }
           }
+
           &.stickyParaph {
             opacity: 1;
           }

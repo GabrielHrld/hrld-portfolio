@@ -40,8 +40,9 @@ const AboutComponent = () => {
               como lo son <span>Sillicon Valley ó Singapur</span>. Desde muy
               chico fui apasionado por la <span>tecnología</span>, creo que es
               lo único en este mundo capáz de amoldarse a cualquier aspecto de
-              nuestra vida. El futuro es tecnología,{' '}
-              <span>el futuro es hoy.</span>
+              nuestra vida.
+              <br />
+              El futuro es tecnología, <span>el futuro es hoy.</span>
             </h3>
             <p className={sticky ? 'learn stickyParaph' : 'learn'}>
               <a href="/about">
