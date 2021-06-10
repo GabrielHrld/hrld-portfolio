@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
+import emailjs from 'emailjs-com';
 
+import Loader from '../Loader';
 import '../../styles/components/Form/FormContainer.scss';
 import InputForm from './InputForm';
 import { expresiones } from '../../utils/regex';
@@ -10,6 +12,59 @@ const FormContainer = () => {
   const [email, setEmail] = useState({ field: '', valid: null });
   const [subject, setSubject] = useState({ field: '', valid: null });
   const [message, setMessage] = useState({ field: '', valid: null });
+  const [error, setError] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [emptyField, setEmptyField] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const dataEmail = {
+    name: name.field,
+    email: email.field,
+    subject: subject.field,
+    message: message.field,
+  };
+
+  const handleSendEmail = (e) => {
+    setLoading(true);
+    e.preventDefault();
+
+    if (name.valid && email.valid && subject.valid) {
+      // console.log('COÑo');
+      // setLoading(false);
+
+      return emailjs
+        .send(
+          'service_46h9pog',
+          'template_ebgztmh',
+          dataEmail,
+          'user_JbDq4TcoGU2mdWsCg5Akg'
+        )
+        .then(() => {
+          setName({ valid: null, field: '' });
+          setEmail({ valid: null, field: '' });
+          setSubject({ valid: null, field: '' });
+          setMessage({ valid: null, field: '' });
+          setLoading(false);
+          setEmptyField(false);
+          setSuccess(true);
+          setTimeout(() => setSuccess(false), 2200);
+        })
+        .catch(() => {
+          setName({ valid: null, field: '' });
+          setEmail({ valid: null, field: '' });
+          setSubject({ valid: null, field: '' });
+          setMessage({ valid: null, field: '' });
+          setLoading(false);
+          setEmptyField(false);
+          setError(true);
+          setTimeout(() => setError(false), 2200);
+        });
+    } else {
+      setLoading(false);
+
+      return setEmptyField(true);
+    }
+  };
 
   const onChange = (e) => {
     setMessage({ ...message, field: e.target.value });
@@ -63,14 +118,31 @@ const FormContainer = () => {
           name="message"
           placeholder="Mensaje"
           id="message"
-          className="input"
+          className={
+            message.valid == null
+              ? 'input'
+              : message.valid
+              ? 'input'
+              : 'input .invalidTextArea'
+          }
           value={message.field}
           onChange={onChange}
           onKeyUp={validateRegex}
         ></textarea>
-        <div className="button-container">
-          <button>Enviar mensaje</button>
-        </div>
+        {loading ? (
+          <div className="loaderContainer">
+            <Loader />
+          </div>
+        ) : (
+          <div className="button-container">
+            <button onClick={handleSendEmail}>Enviar mensaje</button>
+            {emptyField ? (
+              <p style={{ color: '#d11717' }}>
+                Por favor, completa todos los campos
+              </p>
+            ) : null}
+          </div>
+        )}
       </form>
       <div className="contact-info">
         <div className="social-media">
@@ -91,6 +163,28 @@ const FormContainer = () => {
             <FaTwitter className="icon" />
           </a>
           <p>@gabriel_hrld</p>
+        </div>
+      </div>
+      <div
+        className={
+          error
+            ? 'messageContainer dangerMessage active'
+            : 'messageContainer dangerMessage'
+        }
+      >
+        <div className="message">
+          <h3>Error al enviar el mensaje</h3>
+        </div>
+      </div>
+      <div
+        className={
+          success
+            ? 'messageContainer successMessage active'
+            : 'messageContainer successMessage'
+        }
+      >
+        <div className="message">
+          <h3>Mensaje enviado con éxito</h3>
         </div>
       </div>
     </div>

@@ -19,21 +19,21 @@ const SideMenu = ({ active }) => {
               active ? 'sideMenu-nav_item activeItem' : 'sideMenu-nav_item'
             }
           >
-            <a href="/">ABOUT</a>
+            <a href="/">SOBRE MI</a>
           </li>
           <li
             className={
               active ? 'sideMenu-nav_item activeItem' : 'sideMenu-nav_item'
             }
           >
-            <a href="/">WORK</a>
+            <a href="/">PORTAFOLIO</a>
           </li>
           <li
             className={
               active ? 'sideMenu-nav_item activeItem' : 'sideMenu-nav_item'
             }
           >
-            <a href="/">CONTACT</a>
+            <a href="/">CONTACTO</a>
           </li>
         </ul>
       </div>

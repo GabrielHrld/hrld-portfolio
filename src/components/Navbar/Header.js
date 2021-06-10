@@ -42,23 +42,47 @@ const header = () => {
             ) : (
               <ul className="nav-links">
                 <li className="nav-links_item">
-                  <Link smooth={true} duration={500} to="hero">
+                  <Link
+                    smooth={true}
+                    duration={500}
+                    to="hero"
+                    spy={true}
+                    activeClass="linkActive"
+                  >
                     home
                   </Link>
                 </li>
                 <li className="nav-links_item">
-                  <Link smooth={true} duration={500} to="about">
-                    about
+                  <Link
+                    smooth={true}
+                    duration={500}
+                    to="about"
+                    spy={true}
+                    activeClass="linkActive"
+                  >
+                    sobre mi
                   </Link>
                 </li>
                 <li className="nav-links_item">
-                  <Link smooth={true} duration={500} to="portfolio">
-                    work
+                  <Link
+                    smooth={true}
+                    duration={500}
+                    to="portfolio"
+                    spy={true}
+                    activeClass="linkActive"
+                  >
+                    portafolio
                   </Link>
                 </li>
                 <li className="nav-links_item">
-                  <Link smooth={true} duration={500} to="contact">
-                    contact
+                  <Link
+                    smooth={true}
+                    duration={500}
+                    to="contact"
+                    spy={true}
+                    activeClass="linkActive"
+                  >
+                    contacto
                   </Link>
                 </li>
               </ul>

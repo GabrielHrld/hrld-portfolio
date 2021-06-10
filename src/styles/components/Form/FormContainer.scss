@@ -53,6 +53,9 @@
       box-shadow: 2px 5px 10px 1px rgba(0, 0, 0, 0.24);
       margin-bottom: 1.5em;
     }
+    textarea .invalidTextArea {
+      border: 2px solid red;
+    }
     .button-container {
       width: 50%;
       button {
@@ -66,6 +69,13 @@
         &:hover {
           background-color: #0f0f0f;
         }
+      }
+    }
+    .loaderContainer {
+      width: 50%;
+      svg {
+        width: 100%;
+        height: 70px;
       }
     }
   }
@@ -91,6 +101,42 @@
         margin-left: 1em;
         font-family: 'Lato', sans-serif;
         font-size: 16px;
+      }
+    }
+  }
+  .messageContainer {
+    position: fixed;
+    width: 100%;
+    top: -20%;
+    left: 0;
+    z-index: 6;
+    transition: 0.7s all ease-in-out;
+    .message {
+      padding: $padding;
+      padding-top: 1.4rem;
+      padding-bottom: 1.4rem;
+      h3 {
+        font-family: 'Lato', sans-serif;
+        font-size: 1.4rem;
+      }
+    }
+    &.active {
+      top: 0;
+    }
+  }
+  .messageContainer.dangerMessage {
+    background-color: #d11717;
+    .message {
+      h3 {
+        color: #350303;
+      }
+    }
+  }
+  .messageContainer.successMessage {
+    background-color: #1ae23b;
+    .message {
+      h3 {
+        color: #093503;
       }
     }
   }

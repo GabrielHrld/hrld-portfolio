@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Parallax } from 'react-parallax';
 import { useWindowScroll } from 'react-use';
+import { Helmet } from 'react-helmet';
 
 import ScrollToTop from '../components/ScrollToTop';
 import Bg from '../../assets/bg-empty.jpg';
 import '../styles/pages/About.scss';
+import favicon from '../../assets/favicon.jpg';
 
 const About = () => {
   const { y: pageYOffset } = useWindowScroll();
@@ -18,6 +20,11 @@ const About = () => {
 
   return (
     <Parallax bgImage={Bg} strength={700}>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Sobre mí - Gabriel Rodriguez dev.</title>
+        <link rel="icon" type="image/jpg" href={favicon} />
+      </Helmet>
       <ScrollToTop light />
       <div className="aboutPage-wrapper">
         <div className="aboutPage-container">

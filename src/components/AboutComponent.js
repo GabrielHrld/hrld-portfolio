@@ -32,7 +32,7 @@ const AboutComponent = () => {
               sticky ? 'info-container containerSticky' : 'info-container'
             }
           >
-            <p className={sticky ? 'about stickyParaph' : 'about'}>About me</p>
+            <p className={sticky ? 'about stickyParaph' : 'about'}>Sobre mí</p>
             <h3 className={stickySpeech ? 'stickySpeech' : ''}>
               Hola. Mi nombre es Gabriel Rodriguez, soy{' '}
               <span>desarrollador web Fullstack</span>. Inspirado por las
@@ -45,7 +45,7 @@ const AboutComponent = () => {
             </h3>
             <p className={sticky ? 'learn stickyParaph' : 'learn'}>
               <a href="/about">
-                Learn more <BsArrowRight className="icon" />
+                Más información <BsArrowRight className="icon" />
               </a>
             </p>
           </div>
