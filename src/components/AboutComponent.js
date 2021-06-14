@@ -7,7 +7,6 @@ import '../styles/components/AboutComponent.scss';
 const AboutComponent = () => {
   const [sticky, setSticky] = useState(false);
   const [stickySpeech, setStickySpeech] = useState(false);
-  console.log(sticky);
   window.addEventListener('scroll', () => {
     const scrollDistance = window.scrollY;
     if (scrollDistance >= 520) setSticky(true);
