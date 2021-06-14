@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { BsArrowRight } from 'react-icons/bs';
 
-import SideProfile from '../../assets/photo-about.png';
+import SideProfile from '../../assets/about.png';
 import '../styles/components/AboutComponent.scss';
 
 const AboutComponent = () => {

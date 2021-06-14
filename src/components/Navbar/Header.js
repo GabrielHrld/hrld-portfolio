@@ -100,7 +100,7 @@ const header = () => {
             className={openBurger ? 'burger-line active' : 'burger-line'}
           ></div>
         </div>
-        <SideMenu active={openBurger} />
+        <SideMenu state={openBurger} setState={setOperBurger} />
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { Parallax } from 'react-parallax';
 
-import Bg from '../../assets/sintitulo.jpg';
+import Bg from '../../assets/bg-hero.jpg';
 import '../styles/components/Hero.scss';
 
 const Hero = () => {

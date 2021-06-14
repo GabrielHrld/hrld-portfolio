@@ -29,9 +29,6 @@ const FormContainer = () => {
     e.preventDefault();
 
     if (name.valid && email.valid && subject.valid) {
-      // console.log('COÑo');
-      // setLoading(false);
-
       return emailjs
         .send(
           'service_46h9pog',

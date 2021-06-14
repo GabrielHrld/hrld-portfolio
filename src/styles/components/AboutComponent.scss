@@ -76,11 +76,11 @@
       max-width: 100%;
       overflow-x: hidden;
       .photo-container {
-        height: 65%;
+        height: 75%;
         position: absolute;
         left: -100%;
         opacity: -10;
-        transition: 8s opacity ease-out;
+        transition: 6s opacity ease-out;
 
         img {
           height: 100%;

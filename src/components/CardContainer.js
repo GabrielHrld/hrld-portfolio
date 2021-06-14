@@ -3,30 +3,33 @@ import React, { useEffect, useState } from 'react';
 import '../styles/components/CardContainer.scss';
 import Card from './Card';
 
-const test = [
+const portfolio = [
   {
-    title: 'NASA Has Found Hundreds Of Potential New Planets',
+    title: 'HRLD-merce',
     snippet:
-      'NASA released a list of 219 new “planet candidates” discovered by the Kepler space telescope, 10 of which are similar to Earth’s size and may be habitable by other life forms.',
-    link: 'https://www.google.com',
+      'Ecommerce básico completo desarrollado en React como tecnología frontend, y NestJS junto con Node como tecnología de backend.',
+    link: 'https://hrld-merce.vercel.app/',
+    image: 'https://i.imgur.com/OEqSziK.png',
   },
   {
-    title: 'NASA Has Found Hundreds Of Potential New Planets',
+    title: 'Notes App',
     snippet:
-      'NASA released a list of 219 new “planet candidates” discovered by the Kepler space telescope, 10 of which are similar to Earth’s size and may be habitable by other life forms.',
-    link: 'https://www.google.com',
+      'Pequeña aplicación en la cual podemos registrar nuestras notas, editarlas o eliminarlas. Desarrollado en Node utilizando Express como tecnología de backend.',
+    link: 'http://ec2-3-141-196-58.us-east-2.compute.amazonaws.com/',
+    image: 'https://i.imgur.com/U5Wqha7.png',
   },
   {
-    title: 'NASA Has Found Hundreds Of Potential New Planets',
+    title: 'Cripto Exchange',
     snippet:
-      'NASA released a list of 219 new “planet candidates” discovered by the Kepler space telescope, 10 of which are similar to Earth’s size and may be habitable by other life forms.',
-    link: 'https://www.google.com',
+      "Trackea el precio de las veinte criptomonedas más conocidas, así como su precio y reporta los mejores exchange's en los cuales podemos adquirirlas.",
+    link: 'https://exchange-hrld.vercel.app/',
+    image: 'https://i.imgur.com/8tfw2vk.png',
   },
   {
-    title: 'NASA Has Found Hundreds Of Potential New Planets',
-    snippet:
-      'NASA released a list of 219 new “planet candidates” discovered by the Kepler space telescope, 10 of which are similar to Earth’s size and may be habitable by other life forms.',
-    link: 'https://www.google.com',
+    title: 'Traveleter',
+    snippet: 'Web layout diseñado para una empresa de viajes.',
+    link: 'https://traveleter.vercel.app/',
+    image: 'https://i.imgur.com/cxfpNvJ.png',
   },
 ];
 
@@ -44,8 +47,9 @@ const CardContainer = () => {
 
   return (
     <div className="container">
-      {test.map((item, index) => (
+      {portfolio.map((item, index) => (
         <Card
+          image={item.image}
           key={item + index}
           link={item.link}
           title={item.title}
