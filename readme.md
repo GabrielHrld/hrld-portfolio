@@ -1,4 +1,19 @@
-Pre-config for React app using Sass like
-preproccesor.
+# Personal portfolio building with React ⚛
 
-Made with 🤍 by @HeraldHRLD - Gabriel Rodriguez
+## Github
+
+```
+  https://www.github.com/HeraldHRLD
+```
+
+## Linkedin
+
+```
+  https://www.linkedin.com/in/gabrielrodhrld/
+```
+
+## Twitter
+
+```
+  https://www.twitter.com/gabriel_hrld
+```
