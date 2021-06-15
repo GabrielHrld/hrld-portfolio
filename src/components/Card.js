@@ -7,6 +7,7 @@ const Card = ({ snippet, title, link, sticky, image }) => {
     <div className={sticky ? 'card stickyCard' : 'card'}>
       <figure className="card__thumb">
         <img
+          loading="lazy"
           src={image}
           alt="Picture by Kyle Cottrell"
           className="card__image"

@@ -1,12 +1,17 @@
 import React, { useRef, useState } from 'react';
 import { Parallax } from 'react-parallax';
 
-import Bg from '../../assets/bg-hero.jpg';
+import Bg from '../../assets/bg-hero-min.jpg';
 import '../styles/components/Hero.scss';
 
 const Hero = () => {
   return (
-    <Parallax bgImage={Bg} bgClassName="hero" strength={400}>
+    <Parallax
+      bgImage={Bg}
+      bgClassName="hero"
+      strength={400}
+      bgImageAlt="Hero image"
+    >
       <div className="hero-container" id="hero">
         <div className="hero-principal">
           <div className="hero-principal_text">

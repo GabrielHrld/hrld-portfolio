@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BsArrowRight } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 
 import SideProfile from '../../assets/about.png';
 import '../styles/components/AboutComponent.scss';
@@ -22,7 +23,7 @@ const AboutComponent = () => {
               sticky ? 'photo-container photoSticky' : 'photo-container'
             }
           >
-            <img src={SideProfile} alt="" />
+            <img loading="lazy" src={SideProfile} alt="side profile" />
           </div>
         </div>
         <div className="info">
@@ -44,9 +45,9 @@ const AboutComponent = () => {
               El futuro es tecnología, <span>el futuro es hoy.</span>
             </h3>
             <p className={sticky ? 'learn stickyParaph' : 'learn'}>
-              <a href="/about">
+              <Link to="/about">
                 Más información <BsArrowRight className="icon" />
-              </a>
+              </Link>
             </p>
           </div>
         </div>

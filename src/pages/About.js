@@ -4,7 +4,7 @@ import { useWindowScroll } from 'react-use';
 import { Helmet } from 'react-helmet';
 
 import ScrollToTop from '../components/ScrollToTop';
-import Bg from '../../assets/bg-empty.jpg';
+import Bg from '../../assets/bg-empty-min.jpg';
 import '../styles/pages/About.scss';
 import favicon from '../../assets/favicon.jpg';
 
